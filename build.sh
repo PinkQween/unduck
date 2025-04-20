@@ -1,27 +1,38 @@
 #!/bin/bash
 
-# Save your uncommitted changes
-git stash push -m "WIP before build update"
+# Exit on error
+set -e
 
-# Switch to the build branch
-git checkout build
+# Define temp build directory
+BUILD_DIR=/tmp/vite-build
 
-# Clean out the branch (remove everything)
-git rm -rf .
-git clean -fd  # remove untracked files/directories too
-
-# Copy everything from the dist folder into the root
-rsync -a dist/ .
-
-# Add and commit the updated build files
-git add .
-git commit -m "Update build"
-
-# Push to remote
-git push origin build
-
-# Go back to main
+# 1. Make sure you're on main
 git checkout main
 
-# Restore your saved changes
+# 2. Stash uncommitted changes (just in case)
+git stash push -m "WIP before build deploy"
+
+# 3. Clean old temp build
+rm -rf $BUILD_DIR
+
+# 4. Run Vite build into /tmp
+bun run build --outDir $BUILD_DIR
+
+# 5. Switch to build branch
+git checkout build
+
+# 6. Clear current contents
+git rm -rf .
+git clean -fd
+
+# 7. Copy the new build from /tmp into repo root
+rsync -a $BUILD_DIR/ .
+
+# 8. Commit and push
+git add .
+git commit -m "Update build"
+git push origin build
+
+# 9. Switch back and restore work
+git checkout main
 git stash pop
