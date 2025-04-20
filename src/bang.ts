@@ -121961,7 +121961,7 @@ export const bangs = [
     s: "google.com",
     sc: "Google",
     t: "\u043f",
-    u: "https://www.google.com/search?q={{{s}}}",
+    u: "https://www.google.com/search?udm=14&q={{{s}}}",
   },
   {
     c: "Online Services",
