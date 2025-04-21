@@ -41217,7 +41217,7 @@ export const bangs = [
     s: "Google",
     sc: "Google",
     t: "g",
-    u: "https://www.google.com/search?udm=14&q={{{s}}}",
+    u: "https://www.google.com/search?q={{{s}}}&UDM=14&num=100&filter=0",
   },
   {
     c: "Online Services",
