@@ -3,12 +3,12 @@
 set -e
 
 BUILD_DIR=/tmp/vite-build
+rm -rf $BUILD_DIR
 
 echo "🛠️ Building project..."
 git checkout main
 git stash push -m "WIP before build deploy"
 
-rm -rf $BUILD_DIR
 
 bun i
 bun run build --outDir $BUILD_DIR
