@@ -1,38 +1,37 @@
 #!/bin/bash
 
-# Exit on error
 set -e
 
-# Define temp build directory
 BUILD_DIR=/tmp/vite-build
 
-# 1. Make sure you're on main
+echo "🛠️ Building project..."
 git checkout main
-
-# 2. Stash uncommitted changes (just in case)
 git stash push -m "WIP before build deploy"
 
-# 3. Clean old temp build
 rm -rf $BUILD_DIR
 
-# 4. Run Vite build into /tmp
+bun i
 bun run build --outDir $BUILD_DIR
 
-# 5. Switch to build branch
+echo "🚚 Switching to build branch..."
 git checkout build
 
-# 6. Clear current contents
-git rm -rf .
+# Avoid error if there are no files to remove
+echo "🧹 Cleaning build branch..."
+if [ -n "$(git ls-files)" ]; then
+  git rm -rf .
+fi
 git clean -fd
 
-# 7. Copy the new build from /tmp into repo root
+echo "📦 Copying build from $BUILD_DIR..."
 rsync -a $BUILD_DIR/ .
 
-# 8. Commit and push
 git add .
 git commit -m "Update build"
 git push origin build
 
-# 9. Switch back and restore work
+echo "🔁 Switching back to main..."
 git checkout main
 git stash pop
+
+echo "✅ Build branch updated successfully."
