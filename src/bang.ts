@@ -11,6 +11,15 @@ export const bangs = [
     u: "https://www.t3.chat/new?q={{{s}}}",
   },
   {
+    c: "AI",
+    d: "www.chatgpt.com",
+    r: 0,
+    s: "ChatGPT",
+    sc: "AI",
+    t: "gpt",
+    u: "www.chatgpt.com/new?q={{{s}}}&hints=search",
+  },
+  {
     c: "Tech",
     d: "www.01net.com",
     r: 4,
