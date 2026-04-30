@@ -122080,4 +122080,19 @@ export const bangs = [
     t: "\u10d0\u10e1\u10e2\u10e0\u10dd",
     u: "http://astronet.ge/?s={{{s}}}",
   },
+  {
+    c: "Tech",
+    d: "wiki.osdev.org",
+    r: 0,
+    s: "OSDev Wiki",
+    sc: "Programming",
+    t: "osdev",
+    u: "http://wiki.osdev.org/index.php?search={{{s}}}",
+  },
+  {
+    c: "Online Services",
+    d: "unduck.hannaskairipa.com".
+    r: 0,
+    
+  }
 ];

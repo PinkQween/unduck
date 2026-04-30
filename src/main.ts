@@ -12,7 +12,7 @@ function noSearchDefaultPageRender() {
           <input 
             type="text" 
             class="url-input"
-            value="https://unduck.hannaskairipa.com?q=%s"
+            value="https://${window.location.host}?q=%s"
             readonly 
           />
           <button class="copy-button">
@@ -21,11 +21,13 @@ function noSearchDefaultPageRender() {
         </div>
       </div>
       <footer class="footer">
-        <a href="https://t3.chat" target="_blank">t3.chat</a>
-        •
         <a href="https://x.com/theo" target="_blank">theo</a>
         •
-        <a href="https://github.com/t3dotgg/unduck" target="_blank">github</a>
+        <a href="https://github.com/pinkqween" target="_blank">Hanna Skairipa</a>
+        •
+        <a href="https://github.com/pinkqween/unduck" target="_blank">g=GitHub</a>
+        •
+        <a href="https://${window.location.host}/search-bangs" target="_blank">Bang Search</a>
       </footer>
     </div>
   `;
