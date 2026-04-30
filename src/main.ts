@@ -25,7 +25,7 @@ function noSearchDefaultPageRender() {
         •
         <a href="https://github.com/pinkqween" target="_blank">Hanna Skairipa</a>
         •
-        <a href="https://github.com/pinkqween/unduck" target="_blank">g=GitHub</a>
+        <a href="https://github.com/pinkqween/unduck" target="_blank">GitHub</a>
         •
         <a href="https://${window.location.host}/search-bangs" target="_blank">Bang Search</a>
       </footer>
