@@ -122091,8 +122091,11 @@ export const bangs = [
   },
   {
     c: "Online Services",
-    d: "unduck.hannaskairipa.com".
+    d: "unduck.hannaskairipa.com",
     r: 0,
-    
+    s: "Unduck (Hanna Skairipa's version",
+    sc: "Search",
+    t: "unduck",
+    u: "https://unduck.hannaskairipa.com/search-bangs?q={{{s}}}",
   }
 ];
