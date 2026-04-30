@@ -7,4 +7,12 @@ export default defineConfig({
       registerType: "autoUpdate",
     }),
   ],
+  build: {
+    rolldownOptions: {
+      input: {
+        main: "index.html",
+        "search-bangs": "src/search-bangs.html",
+      },
+    },
+  }
 });
