@@ -49518,15 +49518,6 @@ export const bangs = [
     u: "https://hub.helm.sh/charts?q={{{s}}}",
   },
   {
-    c: "Online Services",
-    d: "help.duckduckgo.com",
-    r: 13,
-    s: "DuckDuckGo Help",
-    sc: "Search (DDG)",
-    t: "help",
-    u: "https://help.duckduckgo.com/search?q={{{s}}}",
-  },
-  {
     c: "Shopping",
     d: "www.hema.nl",
     r: 0,
@@ -122086,7 +122077,7 @@ export const bangs = [
     r: 0,
     s: "OSDev Wiki",
     sc: "Programming",
-    t: "osdev",
+    t: "odev",
     u: "http://wiki.osdev.org/index.php?search={{{s}}}",
   },
   {
@@ -122095,7 +122086,7 @@ export const bangs = [
     r: 0,
     s: "Unduck (Hanna Skairipa's version",
     sc: "Search",
-    t: "unduck",
+    t: "help",
     u: "https://unduck.hannaskairipa.com/search-bangs?q={{{s}}}",
   }
 ];
